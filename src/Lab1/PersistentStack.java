@@ -1,14 +1,13 @@
 package Lab1;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class PersistentStack {
-    ArrayList<Node> versionsNodes;
+    ArrayList<Node> versions;
 
     public PersistentStack() {
-        versionsNodes = new ArrayList<>();
-        versionsNodes.add(new Node());
+        versions = new ArrayList<>();
+        versions.add(new Node());
     }
 
     public void push(int version, int value) {
