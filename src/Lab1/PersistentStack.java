@@ -10,7 +10,7 @@ public class PersistentStack {
         versions.add(new Node());
     }
 
-    public void push(int version, int value) {
+    public void push(int value, int version) {
 
     }
 
