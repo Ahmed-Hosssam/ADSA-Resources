@@ -6,10 +6,10 @@ public class UnionFind {
 
     public UnionFind(int numOfSets) {
         this.numOfSets = numOfSets;
-        parent = new int[numOfSets];
-        rank = new int[numOfSets];
-        setSize = new int[numOfSets];
-        for (int i = 0; i < numOfSets; i++) {
+        parent = new int[numOfSets+1];
+        rank = new int[numOfSets+1];
+        setSize = new int[numOfSets+1];
+        for (int i = 0; i <= numOfSets; i++) {
             // Initially, all elements are in their own set.
             parent[i] = i;
             setSize[i] = 1;
