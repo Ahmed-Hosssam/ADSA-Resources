@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c18b271-c209-4f96-b43a-841d315cc146" name="Changes" comment="Initial commit, Template Solution file.">
-      <change afterPath="$PROJECT_DIR$/src/Lab1/PersistentStack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lab1/UnionFind.java" afterDir="false" />
+    <list default="true" id="1c18b271-c209-4f96-b43a-841d315cc146" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Lab2/SegmentTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +37,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/ahmedhossam/IdeaProjects/ADSA-Resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
