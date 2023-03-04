@@ -42,7 +42,7 @@ public class KMP {
             } else { //if they don't match try to match with the previous possible prefix
                 if (len != 0)
                     len = longestPrefixSuffix[len - 1]; //Note that we dont increment i here
-                else { //there was no any proper prefix found which is equal to the suffix for index i
+                else { //there wasn't any proper prefix found which is equal to the suffix for substring input[0,i]
                     longestPrefixSuffix[i] = 0;
                     i++;
                 }
