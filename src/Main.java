@@ -41,5 +41,9 @@ public class Main {
         public double nextDouble() throws IOException {
             return Double.parseDouble(next());
         }
+
+        public boolean ready() throws IOException {
+            return br.ready();
+        }
     }
 }
