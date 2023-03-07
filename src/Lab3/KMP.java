@@ -11,7 +11,7 @@ public class KMP {
             if (text.charAt(textIterator) != pattern.charAt(patternIterator)) {//we have to handle two cases when there is a mismatch
                 if (patternIterator == 0) //start again from the next character in the text as we cant match the first character in the pattern
                     textIterator++;
-                else //longestPrefixSuffix[i-1] will tell from where to compare next and no need to match for pattern[1..aux[i-1]], they will match anyway, that’s what kmp is about.
+                else //longestPrefixSuffix[i-1] will tell from where to compare next and no need to match for pattern[1.. longestPrefixSuffix[i-1]], they will match anyway, that’s what kmp is about.
                     patternIterator = longestPrefixSuffix[patternIterator - 1];
             } else {
                 textIterator++;
