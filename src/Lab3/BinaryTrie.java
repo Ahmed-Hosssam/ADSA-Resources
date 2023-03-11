@@ -2,7 +2,11 @@ package Lab3;
 
 public class BinaryTrie {
     Node root;
-
+    
+    public BinaryTrie(){
+        root = new Node();
+    }
+    
     void insert(int value) {
         Node cur = root;
         for (int i = 30; i >= 0; i--) {
