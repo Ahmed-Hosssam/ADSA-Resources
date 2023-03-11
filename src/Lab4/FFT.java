@@ -124,11 +124,4 @@ public class FFT {
 
         return intres;
     }
-
-    public static void main(String[] args) {
-        int[] A = {2, 1};
-        int[] B = {1, 2};
-        int[] C = multiply(A, B);
-        System.out.println(Arrays.toString(C));
-    }
 }
