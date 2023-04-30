@@ -1,4 +1,4 @@
-package Lab5;
+package Lab6;
 
 public class MatrixExponentiation {
     public static Matrix matPow(Matrix base, long power) {
