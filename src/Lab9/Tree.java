@@ -45,6 +45,7 @@ public class Tree {
     {
 
         P = new int[n][logN];
+        L = new int[n];
 
         for (int i = 0; i < n; i++)
             Arrays.fill(P[i], -1);
