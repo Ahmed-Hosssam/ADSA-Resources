@@ -7,7 +7,8 @@ public class Tree {
     ArrayList<Integer>[] adjL;
     int n, root, logN;
     int[] L;
-    int[][] P;
+    int[][] P;            // P[i][j] --> the 2^j th ancestor of node i
+
 
     public Tree(int n, int root, ArrayList<Integer>[] adjL) {
         this.n = n;
@@ -39,14 +40,11 @@ public class Tree {
     /*
      * Algorithm 1: Parent Sparse Table
      */
-    // P[i][j] --> the 2^j th ancestor of node i
-
     void preprocessParents()    // O(n log n)
     {
 
         P = new int[n][logN];
         L = new int[n];
-
         for (int i = 0; i < n; i++)
             Arrays.fill(P[i], -1);
 
@@ -54,9 +52,12 @@ public class Tree {
     }
 
     void fillParents(int currentNode, int parent) {
+        if (parent != -1)
+            L[currentNode] = L[parent] + 1;
+
         P[currentNode][0] = parent;
 
-        for (int j = 1; j < logN; j++)
+        for (int j = 1; j <= logN; j++)
             if (P[currentNode][j - 1] != -1)
                 P[currentNode][j] = P[P[currentNode][j - 1]][j - 1];
 
