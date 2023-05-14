@@ -6,12 +6,14 @@ import java.util.Arrays;
 public class Tree {
     ArrayList<Integer>[] adjL;
     int n, root, logN;
+    int[] L;
+    int[][] P;
 
     public Tree(int n, int root, ArrayList<Integer>[] adjL) {
         this.n = n;
         this.root = root;
         this.adjL = adjL;
-        this.logN = (int) Math.ceil(Math.log(n) / Math.log(2)) +1;
+        this.logN = (int) Math.ceil(Math.log(n) / Math.log(2)) + 1;
         preprocessParents();
     }
 
@@ -37,14 +39,14 @@ public class Tree {
     /*
      * Algorithm 1: Parent Sparse Table
      */
-    static int N, L[], P[][];            // P[i][j] --> the 2^j th ancestor of node i
+    // P[i][j] --> the 2^j th ancestor of node i
 
     void preprocessParents()    // O(n log n)
     {
 
-        P = new int[N][logN];
+        P = new int[n][logN];
 
-        for (int i = 0; i < N; i++)
+        for (int i = 0; i < n; i++)
             Arrays.fill(P[i], -1);
 
         fillParents(root, -1);
@@ -53,7 +55,7 @@ public class Tree {
     void fillParents(int currentNode, int parent) {
         P[currentNode][0] = parent;
 
-        for (int j = 1; j <= logN; j++)
+        for (int j = 1; j < logN; j++)
             if (P[currentNode][j - 1] != -1)
                 P[currentNode][j] = P[P[currentNode][j - 1]][j - 1];
 
@@ -65,7 +67,7 @@ public class Tree {
         }
     }
 
-    static int query(int p, int q)        // O(log n)
+    int query(int p, int q)        // O(log n)
     {
         //if p is situated on a higher level than q, swap them
         if (L[p] < L[q]) {
