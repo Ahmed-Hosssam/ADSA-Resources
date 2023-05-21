@@ -19,6 +19,10 @@ public class Main {
         public Scanner(InputStream s) {
             br = new BufferedReader(new InputStreamReader(s));
         }
+        
+        public Scanner(String s) throws FileNotFoundException {
+            br = new BufferedReader(new FileReader(s));
+        }
 
         public String next() throws IOException {
             while (st == null || !st.hasMoreTokens())
